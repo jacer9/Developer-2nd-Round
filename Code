@@ -1,0 +1,29 @@
+def shared_motif(dna_list):
+    dna_list = ["GATTACA", "TAGACCA", "ATACA"]
+    res = min(dna_list, key = len) # smallest string length
+    short_dna = res;
+    print(res)
+    largest = ''
+    long_string = false;
+    bar = false
+    x = false
+    for i in dna_list:
+        x = false
+        k = 0
+        if (long_string == true & bar != true) :
+            short_dna = short_dna[:-1]
+        if (short_dna.len == 0):
+            short_dna = res
+            bar == true
+        if (bar == true) :
+            short_dna = short_dna[1:]
+            
+        for j in i:
+            if (j != short_dna[k]):
+                long_string = true
+                x = true
+                break
+            
+        if (x == false & largest.len < short_dna):
+            largest = short_dna;
+        
