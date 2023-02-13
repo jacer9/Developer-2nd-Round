@@ -27,3 +27,6 @@ def shared_motif(dna_list):
         if (x == false & largest.len < short_dna):
             largest = short_dna;
         
+
+    return shared_motif([])
+
